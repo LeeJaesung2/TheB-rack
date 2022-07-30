@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--CSS link-->
-    <link rel="stylesheet" herf="{% static 'css/nav.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <!--logo-->
-    <img src="{% static 'img/logo.svg' %}" class="logo" alt="logo is not load">
+    <div class="logo" ><img src="{% static 'img/logo.svg' %}" alt="logo is not load"></div>
 </head>
 <body>
     {% block content %}
     {% endblock %}
+    <p class="copyRight">©TheB-rack</p>
 </body>
 <footer class="bottomTap">
-    <div><img src="{% static 'img/homeTap.svg' %}" alt=""></div>
-    <div><img src="{% static 'img/infoTap.svg' %}" alt=""></div>
-    <div><img src="{% static 'img/myTap.svg' %}" alt=""></div>
+    <button class="home"><img src="{% static 'img/homeTap.svg' %}" alt=""></button>
+    <button class="info"><img src="{% static 'img/infoTap.svg' %}" alt=""></button>
+    <button class="my"><img src="{% static 'img/myTap.svg' %}" alt=""></button>
 </footer>
 </html>
