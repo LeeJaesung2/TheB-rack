@@ -17,8 +17,8 @@
     <p class="copyRight">©TheB-rack</p>
 </body>
 <footer class="bottomTap">
-    <button class="home"><img src="{% static 'img/homeTap.svg' %}" alt=""></button>
-    <button class="info"><img src="{% static 'img/infoTap.svg' %}" alt=""></button>
-    <button class="my"><img src="{% static 'img/myTap.svg' %}" alt=""></button>
+    <a href="{% url 'home' %}" class="home"><img src="{% static 'img/homeTap.svg' %}" alt=""></a>
+    <a href="#" class="info"><img src="{% static 'img/infoTap.svg' %}" alt=""></a>
+    <a href="{% url 'login' %}" class="my"><img src="{% static 'img/myTap.svg' %}" alt=""></a>
 </footer>
 </html>
