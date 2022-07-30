@@ -18,7 +18,7 @@
 
     }
 .butom{   
-    padding: 10px;
+    padding: 10%;
     background: #FFFFFF;
     margin-top: 0px;
     border-radius: 0px 0px 10px 10px;
@@ -26,6 +26,14 @@
 #status{
     color: #6BC0AC;
     }
+#parkingPlace{
+    font-size: 20px;
+
+}
+#safety{
+    border: 1.5px solid #6BC0AC;
+    border-radius: 30px;
+}
 #dot{
     color: #6BC0AC;
     font-size: 96px;
