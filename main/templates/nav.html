@@ -1,9 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--CSS link-->
+    <link rel="stylesheet" herf="{% static 'css/nav.css' %}" type="text/css" />
+    <!--logo-->
+    <img src="{% static 'img/logo.svg' %}" class="logo" alt="logo is not load">
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    
+<!-- 내코드 아님 -->
     <title>login</title>
 </head>
 <body>
@@ -12,5 +24,12 @@
     <button><img src="C:\Users\JHS\Desktop\kakao_login_medium_narrow.png"/></button>
 
 
+<!-- 내코드 아님 -->
 </body>
+<!--tap bar-->
+<footer class="bottomTap">
+    <div><img src="{% static 'img/homeTap.svg' %}" alt=""></div>
+    <div><img src="{% static 'img/infoTap.svg' %}" alt=""></div>
+    <div><img src="{% static 'img/myTap.svg' %}" alt=""></div>
+</footer>
 </html>
