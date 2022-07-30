@@ -1,0 +1,23 @@
+.text{
+    position: absolute;
+    width: 244px;
+    height: 34px;
+    left: 73px;
+    top: 277px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #000000;
+}
+.img{
+    position: absolute;
+    width: 270px;
+    height: 66.39px;
+    left: 60px;
+    top: 399px;
+
+}
