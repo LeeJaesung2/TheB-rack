@@ -7,42 +7,37 @@
     font-size: 12px;
     display: flex;
     justify-content: center;
-    position: relative;
-    bottom: 0px;
-    left: 0px;
-
+    width: 100%;
+    position: fixed;
+    bottom: 60px;
+    
 }
 
 .bottomTap{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     left: 0px;
+    border-top: 1px solid #ABABAB;
+    border-bottom: 0px solid white;
+    border-left: 0px solid white;
+    border-right: 0px solid white;
 }
 .home{
     background-color: white;
-    border-top: 1px solid #ABABAB;
-    border-bottom: 0px solid white;
-    border-left: 0px solid white;
-    border-right: 0px solid white;
+    border: none;
 }
 .info{
     background-color: white;
-    border-top: 1px solid #ABABAB;
-    border-bottom: 0px solid white;
-    border-left: 0px solid white;
-    border-right: 0px solid white;
+    border: none;
+    
 
 }
 .my{
     background-color: white;
-    border-top: 1px solid #ABABAB;
-    border-bottom: 0px solid white;
-    border-left: 0px solid white;
-    border-right: 0px solid white;
-
+    border: none;
 }
 
