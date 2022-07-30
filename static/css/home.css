@@ -1,44 +1,56 @@
 
-        .box{
-            background: #353535;
-            padding: 0px;
-            border-radius: 10px;
-            }
-            .top {
-                border-bottom: 2px solid gray;
-                color: #FFFFFF; 
-    
-                }
-            .butom{   
-                padding: 10px;
-                background: #FFFFFF;
-                margin-top: 0px;
-                border-radius: 0px 0px 10px 10px;
-    
-            }
-            #status{
-                color: #6BC0AC;
-    
-            }
-            #dot{
-                color: #6BC0AC;
-                font-size: 96px;
+.box{
+    background: #353535;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Inter';
+    font-style: normal;
+    margin: 10%;
+    margin-top: 0%;
+    }
+.top {
+    border-bottom: 2px solid gray;
+    color: #FFFFFF;
+    grid-template-columns: 8fr 2fr 2fr;
+    display: grid; 
+    text-align: center;
 
-            }
-            .button {
-                position: absolute;
-                width: 320px;
-                height: 60px;
-                left: 33px;
-                top: 440px;
-                background-color: #6BC0AC;
-                border: none;
-                color: white;
-                padding: 20px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                border-radius: 70px;
-                }
+    }
+.butom{   
+    padding: 10px;
+    background: #FFFFFF;
+    margin-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+    }
+#status{
+    color: #6BC0AC;
+    }
+#dot{
+    color: #6BC0AC;
+    font-size: 96px;
+    height: 60px;
+    }
+
+.button {
+    width: 320px;
+    height: 60px;
+    background-color: #6BC0AC;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 70px;
+    }
+.gray{
+    color: #777777;
+    }
+.buttonBox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    }
