@@ -1,23 +1,23 @@
-.text{
+.txt{
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 50%;
-    top: 20%;
+    left: 10%;
+    top: 25%;
 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 30px;
 
     color: #000000;
 }
 .img{
     position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 50%;
-    top: 75%;
+    width: 50%;
+    height: 10%;
+    left: 10%;
+    top: 70%;
 
 }

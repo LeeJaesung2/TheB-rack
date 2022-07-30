@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <!--CSS link-->
-    <link rel="stylesheet" herf="{% static 'css/login.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
-    <div><h3><bold>알림을 받으시려면<br>자전거를 등록해 보세요</h3></bold></div>
+    <div><p class="txt">알림을 받으시려면<br>자전거를 등록해 보세요</p></div>
     <br><br><br><br><br>
-    <button><img src="{% static 'img/kakao_login.png' %}" alt=""></button>
+    <button class="img"><img src="{% static 'img/kakao_login.png' %}" alt=""></button>
 </body>
 </html>
 {% endblock %}
