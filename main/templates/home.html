@@ -1,1 +1,71 @@
-<title>thebra</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigBox {
+            position: absolute;
+            width: 320px;
+            height: 214px;
+            left: 33px;
+            top: 188px;
+            display: block;
+            margin-left: 2px;
+            margin-right: 2px;
+            padding: 0px;
+            border: 2px groove (internal value);
+            }
+        .smallBox{
+            margin: 0;
+            height: 150px;
+            
+        }
+        .button {
+            position: absolute;
+            width: 320px;
+            height: 60px;
+            left: 33px;
+            top: 440px;
+            background-color: #6BC0AC;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 70px;
+            }
+
+    </style>
+</head>
+<body>
+    <div>
+       
+        <form action="/action_page.php">
+            <fieldset class="bigBox">
+                <div>
+                    <span>자전거 거치정보</span>
+                    <span>거치중</span>
+                </div>
+                <div>
+                    <fieldset class="smallBox">
+                        <p>자전거 위치</p>
+                        <p>기숙사 12번</p>
+                        <P>거치시간</P>
+                        <p>2022년 7월 22일 13:20</p>
+                    </fieldset>
+                </div>
+            </fieldset>
+          </form>
+     
+    </div>
+
+    <button class="button button5">거치 해제하기</button>
+
+</body>
+</html>
