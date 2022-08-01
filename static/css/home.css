@@ -7,14 +7,18 @@
     font-family: 'Inter';
     font-style: normal;
     margin: 10%;
-    margin-top: 0%;
     }
 .top {
     border-bottom: 2px solid gray;
     color: #FFFFFF;
-    grid-template-columns: 8fr 2fr 2fr;
+    grid-template-columns: 80fr 5fr 30fr;
     display: grid; 
     text-align: center;
+    padding: 3%;
+    padding-left: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
 
     }
 .butom{   
@@ -22,23 +26,46 @@
     background: #FFFFFF;
     margin-top: 0px;
     border-radius: 0px 0px 10px 10px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
     }
+
+#parkingPlace{
+    font-size: 20px;
+}
+#information{
+    position: relative;
+    text-align: left;
+    padding-left: 21px;
+
+}
+#position{
+    padding-top: 0px;
+}
 #status{
     color: #6BC0AC;
     }
-#parkingPlace{
-    font-size: 20px;
 
-}
 #safety{
     border: 1.5px solid #6BC0AC;
     border-radius: 30px;
-}
-#dot{
+    font-size: 10px;
     color: #6BC0AC;
-    font-size: 96px;
-    height: 60px;
-    }
+    font-weight: 700;
+    line-height: 12px;
+    width: 44px;
+    height: 22px;
+}
+
+#circle{
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #6BC0AC;
+}
 
 .button {
     width: 320px;
@@ -53,6 +80,8 @@
     font-size: 16px;
     margin: 4px 2px;
     border-radius: 70px;
+    font-weight: 700;
+    line-height: 19px;
     }
 .gray{
     color: #777777;
