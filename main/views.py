@@ -40,3 +40,6 @@ def update(request, bycicle_position):
 #     bycicle_info = Bycicle_info.objects.get(pk = bycicle_position)
 #     serializer = BycicleSerializer(bycicle_info)
 #     return Response(serializer.data)
+
+def rack(request,bycicle_position):
+    pass
