@@ -7,6 +7,10 @@ class Bycicle_info(models.Model):
     status = models.IntegerField()
     rack_time = models.DateTimeField()
 
+class Brack(models.Model):
+    username = models.CharField(max_length=100)
+    bycicle = models.ForeignKey(Bycicle_info, on_delete=models.CASCADE)
+
 
 # json 형식
 # {

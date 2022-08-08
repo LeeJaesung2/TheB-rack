@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializer import BycicleSerializer
-from .models import Bycicle_info
+from .models import Bycicle_info, Brack
 
 # Create your views here.
 
@@ -40,4 +40,8 @@ def update(request, bycicle_position):
 #     return Response(serializer.data)
 
 def rack(request,bycicle_position):
-    pass
+    brack = Brack()
+    #brack.username = kakaousername
+    brack.bycicle = get_object_or_404(Bycicle_info, pk=bycicle_position)
+    brack.save()
+    return redirect('home')
