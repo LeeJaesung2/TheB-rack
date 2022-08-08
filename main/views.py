@@ -10,8 +10,6 @@ from .models import Bycicle_info
 def home(request):
     return render(request, 'home.html')
 
-def login(request):
-    return render(request, 'login.html')
 
 #라즈베리에서 값을 보내주는 API
 @api_view(['POST'])
@@ -40,3 +38,6 @@ def update(request, bycicle_position):
 #     bycicle_info = Bycicle_info.objects.get(pk = bycicle_position)
 #     serializer = BycicleSerializer(bycicle_info)
 #     return Response(serializer.data)
+
+def rack(request,bycicle_position):
+    pass

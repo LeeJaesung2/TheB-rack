@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
-    'rest_framework'
+    "user.apps.UserConfig",
+    'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +129,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[ os.path.join(BASE_DIR,'static'),]
+
+
+KAKAO_REST_API_KEY = "75e3d1c4c1678a3ef89b31f5b61bd52d"
+KAKAO_REDIRECT_URI = "http://localhost:8000/"
+KAKAO_CLIENT_SECRET_KEY = "tdaAPVCiFcYxz03VYv5rjBVTfo8CMsPI"
+
+
+kakao_login_uri = "https://kauth.kakao.com/oauth/authorize"
+kakao_token_uri = "https://kauth.kakao.com/oauth/token"
+kakao_profile_uri = "https://kapi.kakao.com/v2/user/me"
