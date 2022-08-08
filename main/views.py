@@ -10,8 +10,6 @@ from .models import Bycicle_info
 def home(request):
     return render(request, 'home.html')
 
-def login(request):
-    return render(request, 'login.html')
 
 #라즈베리에서 값을 보내주는 API
 @api_view(['POST'])
