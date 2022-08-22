@@ -38,7 +38,8 @@
     </div>
     {% if access_token is not null %}
     <div class="buttonBox">   
-        <button class="button">거치 해제하기</button>
+        <button class="button" onclick="location.href='{% url 'remove' %}'">거치 해제하기</button>
+        
     </div>
     {% endif %}
 

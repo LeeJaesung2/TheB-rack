@@ -1,4 +1,5 @@
 from django.db import models
+from user.models import User
 
 # Create your models here.
 
@@ -8,8 +9,9 @@ class Bycicle_info(models.Model):
     rack_time = models.DateTimeField()
 
 class Brack(models.Model):
-    username = models.CharField(max_length=100)
+    username = models.ForeignKey(User, on_delete=models.CASCADE)
     bycicle = models.ForeignKey(Bycicle_info, on_delete=models.CASCADE)
+
 
 
 # json 형식
