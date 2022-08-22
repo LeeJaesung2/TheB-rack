@@ -5,6 +5,10 @@ from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from drf_yasg.utils import swagger_auto_schema
 from .serializers import *
+from rest_framework.response import Response
+from rest_framework import status
+from .models import User
+import requests
 
 # Create your views here.
 
@@ -12,38 +16,29 @@ def login(request):
     return render(request, 'login.html')
 
 
-
-def login_api(social_type: str, social_id: str, email: str=None, phone: str=None):
+#회원가입 API
+def login_api(social_type: str, social_id: str, user_email: str=None):
     '''
     회원가입 및 로그인
     '''
-    login_view = LoginView()
     try:
-        UserModel.objects.get(social_id=social_id)
-        data = {
-            'social_id': social_id,
-            'email': email,
-        }
-        response = login_view.object(data=data)
+        User.objects.get(social_id=social_id)
+        response = "exist user"
 
-    except UserModel.DoesNotExist:
-        data = {
-            'social_type': social_type,
-            'social_id': social_id,
-            'email': email,
-        }
-        user_view = UserView()
-        login = user_view.get_or_create_user(data=data)
+    except User.DoesNotExist:
+        user = User()
+        user.social_id = social_id
+        user.social_type = social_type
+        user.email = user_email
+        user.save()
 
-        response = login_view.object(data=data) if login.status_code == 201 else login
-
-    return response
 
 
 kakao_login_uri = "https://kauth.kakao.com/oauth/authorize"
 kakao_token_uri = "https://kauth.kakao.com/oauth/token"
 kakao_profile_uri = "https://kapi.kakao.com/v2/user/me"
 
+#로그인 API
 class KakaoLoginView(APIView):
     permission_classes = [AllowAny]
 
@@ -59,17 +54,15 @@ class KakaoLoginView(APIView):
         res = redirect(uri)
         return res
 
-
+#회원정보 가져오기 API
 class KakaoCallbackView(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = (AllowAny,)
 
-    @swagger_auto_schema(query_serializer=CallbackUserInfoSerializer)
     def get(self, request):
         '''
-        kakao access_token 및 user_info 요청
-        ---
+        kakao access_token 요청 및 user_info 요청
         '''
-        data = request.query_params
+        data = request.query_params.copy()
 
         # access_token 발급 요청
         code = data.get('code')
@@ -111,6 +104,21 @@ class KakaoCallbackView(APIView):
             return Response(status=status.HTTP_400_BAD_REQUEST)
         user_email = kakao_account.get('email')
 
-        # 회원가입 및 로그인
-        res = login_api(social_type=social_type, social_id=social_id, email=user_email)
-        return res
+        '''
+        # 회원가입 및 로그인 처리 알고리즘 추가필요
+        '''
+
+        # 테스트 값 확인용
+        res = {
+            'social_type': social_type,
+            'social_id': social_id,
+            'user_email': user_email,
+        }
+
+
+        
+        response = Response(status=status.HTTP_200_OK)
+        response.data = res
+        login_api(**res)
+
+        return render(request, 'home.html',{'access_token':access_token})

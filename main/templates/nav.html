@@ -19,6 +19,10 @@
 <footer class="bottomTap">
     <a href="{% url 'home' %}" class="home"><img src="{% static 'img/homeTap.svg' %}" alt=""></a>
     <a href="#" class="info"><img src="{% static 'img/infoTap.svg' %}" alt=""></a>
+    {% if access_token is not null %}
     <a href="{% url 'login' %}" class="my"><img src="{% static 'img/myTap.svg' %}" alt=""></a>
+    {% else %}
+    <a href="{% url 'login' %}" class="my"><img src="{% static 'img/login.svg' %}" alt=""></a>
+    {% endif %}
 </footer>
 </html>
