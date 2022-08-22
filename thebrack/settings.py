@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-77)gvw#tv+3=2gv9o(gcv5f2jq#p6^ko^8f9fnckgmn3sj1$cg
 DEBUG = True
 
 ALLOWED_HOSTS = []
+AUTH_USER_MODEL = 'user.User'
 
 
 # Application definition
@@ -131,9 +132,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[ os.path.join(BASE_DIR,'static'),]
 
 
-KAKAO_REST_API_KEY = "75e3d1c4c1678a3ef89b31f5b61bd52d"
-KAKAO_REDIRECT_URI = "http://localhost:8000/"
-KAKAO_CLIENT_SECRET_KEY = "tdaAPVCiFcYxz03VYv5rjBVTfo8CMsPI"
+KAKAO_REST_API_KEY = "95d396fe2cdb14e29e540b99118bd313"
+KAKAO_REDIRECT_URI = "http://localhost:8000/user/kakao/login/callback"
+KAKAO_CLIENT_SECRET_KEY = "acNdarrmhWUNqdk11n1J4aAT5wjDPd70"
 
 
 kakao_login_uri = "https://kauth.kakao.com/oauth/authorize"

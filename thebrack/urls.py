@@ -24,5 +24,6 @@ urlpatterns = [
     #path('status/<int:bycicle_position>',views.get, name='get'),
     path('status/<int:bycicle_position>',views.update, name='update'),
     path('position/<int:bycicle_position>', views.rack, name="rack"),
+    path('remove',views.remove, name="remove"),
     path('user/', include('user.urls')),
 ]
