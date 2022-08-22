@@ -17,10 +17,13 @@
     <div class="box">
                 <div class="top">
                     <span id ="information">자전거 거치정보</span>
+                    {% if access_token is not null %}
                     <div id="circle"></div>
                     <span id="status">거치중</span>
+                    {% endif %}
                 </div>
                 <div class="bottom">
+                        {% if access_token is not null %}
                         <span class="gray">자전거 위치</span><br></br>
                         <div id="parkingPlace">
                             <span>기숙사 12번</span>
@@ -28,11 +31,16 @@
                         </div>
                         <P class="gray">거치 시간</P>
                         <span>2022년 7월 22일 13:20</span>
+                        {% else %}
+                        <span class="login_ment">로그인 해주세요</span>
+                        {% endif %}
                 </div>
     </div>
+    {% if access_token is not null %}
     <div class="buttonBox">   
         <button class="button">거치 해제하기</button>
     </div>
+    {% endif %}
 
 </body>
 </html>
