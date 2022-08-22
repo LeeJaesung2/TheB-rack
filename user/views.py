@@ -9,28 +9,30 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import User
 import requests
+from django.contrib.auth import login
 
 # Create your views here.
 
-def login(request):
+def loginview(request):
     return render(request, 'login.html')
 
 
 #회원가입 API
-def login_api(social_type: str, social_id: str, user_email: str=None):
+def login_api(request, social_type: str, social_id: str, user_email: str=None):
     '''
     회원가입 및 로그인
     '''
     try:
-        User.objects.get(social_id=social_id)
+        user = User.objects.get(username=social_id)
         response = "exist user"
 
     except User.DoesNotExist:
         user = User()
-        user.social_id = social_id
+        user.username = social_id
         user.social_type = social_type
         user.email = user_email
         user.save()
+    login(request, user)
 
 
 
@@ -55,7 +57,7 @@ class KakaoLoginView(APIView):
         return res
 
 #회원정보 가져오기 API
-class KakaoCallbackView(APIView):
+class KakaoCallbackloginView(APIView):
     permission_classes = (AllowAny,)
 
     def get(self, request):
@@ -119,6 +121,7 @@ class KakaoCallbackView(APIView):
         
         response = Response(status=status.HTTP_200_OK)
         response.data = res
-        login_api(**res)
+        login_api(request, **res)
 
-        return render(request, 'home.html',{'access_token':access_token})
+        return redirect('home')
+
