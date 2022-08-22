@@ -4,8 +4,10 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializer import BycicleSerializer
 from .models import Bycicle_info, Brack
+from user.models import User
 from thebrack import settings
 import requests
+
 
 # Create your views here.
 
@@ -42,15 +44,12 @@ def update(request, bycicle_position):
 #     return Response(serializer.data)
 
 def rack(request,bycicle_position):
-    #token = get_token(request)
-    #if token is null:
-    #    return redirect('login')
-    #else:
-        brack = Brack()
-        #brack.username = kakaousername
-        brack.bycicle = get_object_or_404(Bycicle_info, pk=bycicle_position)
-        brack.save()
-        return redirect('home')
+    brack = Brack()
+    brack.username = User.objects.get(username=request.user.username)
+    brack.bycicle = get_object_or_404(Bycicle_info, pk=bycicle_position)
+    brack.save()
+
+    return redirect('home')
 
 def remove():
     pass
