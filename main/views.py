@@ -71,10 +71,10 @@ def sendMail(mail):
     message["From"] = "dlwotjd9909@gmail.com"
     message["To"] = mail
 
-    smtp = smtplib.SMTP_SSL(SMTP_SERVER,SMTP_PORT)
-    smtp.login("dlwotjd9909@gmail.com","######")
+    smtp = smtplib.SMTP_SSL(settings.SMTP_SERVER,settings.SMTP_PORT)
+    smtp.login("dlwotjd9909@gmail.com","xthfcjxdabonlicn")
 
-    is_valid("###@gmail.com")
+    email_is_valid(mail)
     if smtp.send_message(message)=={} :
         print("성공적으로 메일을 보냈습니다.")
 
