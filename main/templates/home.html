@@ -26,11 +26,11 @@
                         {% if user.is_authenticated %}
                         <span class="gray">자전거 위치</span><br></br>
                         <div id="parkingPlace">
-                            <span>기숙사 12번</span>
+                            <span>{{ brack.position }}번</span>
                             <div id="safety">안전</div>
                         </div>
                         <P class="gray">거치 시간</P>
-                        <span>2022년 7월 22일 13:20</span>
+                        <span>{{ brack.bycicle.rack_time }}</span>
                         {% else %}
                         <span class="login_ment">로그인 해주세요</span>
                         {% endif %}

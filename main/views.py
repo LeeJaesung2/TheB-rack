@@ -15,7 +15,11 @@ import re
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    brack = Brack()
+    if request.user.username:
+        user = request.user.username
+        brack = Brack.objects.get(username__username=user)
+    return render(request, 'home.html',{'brack':brack})
 
 
 #라즈베리에서 값을 보내주는 API
