@@ -15,7 +15,11 @@ import re
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    brack = Brack()
+    if request.user.username:
+        user = request.user.username
+        brack = Brack.objects.get(username__username=user)
+    return render(request, 'home.html',{'brack':brack})
 
 
 #라즈베리에서 값을 보내주는 API
@@ -47,10 +51,14 @@ def update(request, bycicle_position):
 #     return Response(serializer.data)
 
 def rack(request,bycicle_position):
-    brack = Brack()
-    brack.username = User.objects.get(username=request.user.username)
-    brack.bycicle = get_object_or_404(Bycicle_info, pk=bycicle_position)
-    brack.save()
+    try:
+        brack = Brack.objects.get(pk = bycicle_position)
+    except Brack.DoesNotExist:
+        brack = Brack()
+        brack.position = bycicle_position
+        brack.username = User.objects.get(username=request.user.username)
+        brack.bycicle = get_object_or_404(Bycicle_info, pk=bycicle_position)
+        brack.save()
 
     return redirect('home')
 
@@ -71,10 +79,10 @@ def sendMail(mail):
     message["From"] = "dlwotjd9909@gmail.com"
     message["To"] = mail
 
-    smtp = smtplib.SMTP_SSL(SMTP_SERVER,SMTP_PORT)
-    smtp.login("dlwotjd9909@gmail.com","######")
+    smtp = smtplib.SMTP_SSL(settings.SMTP_SERVER,settings.SMTP_PORT)
+    smtp.login("dlwotjd9909@gmail.com","xthfcjxdabonlicn")
 
-    is_valid("###@gmail.com")
+    email_is_valid(mail)
     if smtp.send_message(message)=={} :
         print("성공적으로 메일을 보냈습니다.")
 
