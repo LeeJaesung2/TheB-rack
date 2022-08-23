@@ -1,0 +1,34 @@
+.txt{
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    width: 244px;
+    height: 34px;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%,-50%);
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+
+    color: #000000;
+}
+.button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%,-50%);
+    width: 270px;
+    height: 66.39px;
+
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    border: 0cm;
+}
+.img{
+    width :100%;
+}
