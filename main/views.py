@@ -7,6 +7,9 @@ from .models import Bycicle_info, Brack
 from user.models import User
 from thebrack import settings
 import requests
+from email.message import EmailMessage
+import smtplib
+import re
 
 
 # Create your views here.
@@ -53,5 +56,29 @@ def rack(request,bycicle_position):
 
 def remove():
     pass
+
+def email_is_valid(addr):
+    if re.match('(^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9-]+.[a-zA-Z]{2,3}$)', addr):
+        return True
+    else:
+        return False
+
+def sendMail(mail):
+    message = EmailMessage()
+    message.set_content("자전거가 도난되었습니다")
+
+    message["Subject"] = "자전거 상태 변경 알림"
+    message["From"] = "dlwotjd9909@gmail.com"
+    message["To"] = mail
+
+    smtp = smtplib.SMTP_SSL(SMTP_SERVER,SMTP_PORT)
+    smtp.login("dlwotjd9909@gmail.com","######")
+
+    is_valid("###@gmail.com")
+    if smtp.send_message(message)=={} :
+        print("성공적으로 메일을 보냈습니다.")
+
+    smtp.quit()
+
 
 
