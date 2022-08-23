@@ -136,7 +136,5 @@ KAKAO_REST_API_KEY = "95d396fe2cdb14e29e540b99118bd313"
 KAKAO_REDIRECT_URI = "http://localhost:8000/user/kakao/login/callback"
 KAKAO_CLIENT_SECRET_KEY = "acNdarrmhWUNqdk11n1J4aAT5wjDPd70"
 
-
-kakao_login_uri = "https://kauth.kakao.com/oauth/authorize"
-kakao_token_uri = "https://kauth.kakao.com/oauth/token"
-kakao_profile_uri = "https://kapi.kakao.com/v2/user/me"
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 465
