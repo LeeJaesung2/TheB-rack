@@ -9,7 +9,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import User
 import requests
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 
 # Create your views here.
 
@@ -125,3 +125,6 @@ class KakaoCallbackloginView(APIView):
 
         return redirect('home')
 
+def logout_view(request):
+    logout(request)
+    return redirect('home')

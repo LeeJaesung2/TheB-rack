@@ -62,8 +62,8 @@ def rack(request,bycicle_position):
 
     return redirect('home')
 
-def remove():
-    pass
+def remove(request):
+    return redirect('home')
 
 def email_is_valid(addr):
     if re.match('(^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9-]+.[a-zA-Z]{2,3}$)', addr):
