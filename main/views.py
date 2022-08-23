@@ -47,10 +47,14 @@ def update(request, bycicle_position):
 #     return Response(serializer.data)
 
 def rack(request,bycicle_position):
-    brack = Brack()
-    brack.username = User.objects.get(username=request.user.username)
-    brack.bycicle = get_object_or_404(Bycicle_info, pk=bycicle_position)
-    brack.save()
+    try:
+        brack = Brack.objects.get(pk = bycicle_position)
+    except Brack.DoesNotExist:
+        brack = Brack()
+        brack.position = bycicle_position
+        brack.username = User.objects.get(username=request.user.username)
+        brack.bycicle = get_object_or_404(Bycicle_info, pk=bycicle_position)
+        brack.save()
 
     return redirect('home')
 

@@ -11,6 +11,7 @@ class Bycicle_info(models.Model):
         return str(self.position)
 
 class Brack(models.Model):
+    position = models.IntegerField(primary_key=True)
     username = models.ForeignKey(User, on_delete=models.CASCADE)
     bycicle = models.ForeignKey(Bycicle_info, on_delete=models.CASCADE)
     def __str__(self):
