@@ -136,7 +136,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static_root')
 
 
 KAKAO_REST_API_KEY = "95d396fe2cdb14e29e540b99118bd313"
-KAKAO_REDIRECT_URI = "http://localhost:8000/user/kakao/login/callback"
+KAKAO_REDIRECT_URI = "http://ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com/user/kakao/login/callback"
 KAKAO_CLIENT_SECRET_KEY = "acNdarrmhWUNqdk11n1J4aAT5wjDPd70"
 
 SMTP_SERVER = "smtp.gmail.com"
