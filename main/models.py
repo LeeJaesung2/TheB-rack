@@ -1,11 +1,21 @@
 from django.db import models
 from user.models import User
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 
 class Bycicle_info(models.Model):
     position = models.IntegerField(primary_key=True)
-    status = models.IntegerField()
+    
+    STATUS_CHOICE=(
+        (0,'빈 자리'),
+        (1,'거치중'),
+        (2,'도난'),
+    )
+
+    STATUS_SECTION = [MaxValueValidator(2),MinValueValidator(0)]
+
+    status = models.IntegerField(validators=STATUS_SECTION, choices = STATUS_CHOICE)
     rack_time = models.DateTimeField()
     def __str__(self):
         return str(self.position)

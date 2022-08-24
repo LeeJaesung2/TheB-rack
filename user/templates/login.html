@@ -12,8 +12,13 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
+    
+    {% if user.is_authenticated %}
+    <button onclick="location.href='{% url 'logout' %}'">로그아웃</button>
+    {% else %}
     <div><p class="txt">알림을 받으시려면<br>자전거를 등록해 보세요</p></div>
     <a href="{% url 'kakaologin' %}" class="button"><img src="{% static 'img/kakao_login.png' %}" alt="" class="img"></a>
+    {% endif %}
 </body>
 </html>
 {% endblock %}
