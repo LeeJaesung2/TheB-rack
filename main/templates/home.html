@@ -24,6 +24,7 @@
                 </div>
                 <div class="bottom">
                         {% if user.is_authenticated %}
+                        {% if brack.position is not null %}
                         <span class="gray">자전거 위치</span><br></br>
                         <div id="parkingPlace">
                             <span>{{ brack.position }}번</span>
@@ -32,15 +33,20 @@
                         <P class="gray">거치 시간</P>
                         <span>{{ brack.bycicle.rack_time }}</span>
                         {% else %}
+                        <span class="login_ment">등록된 자전거 정보가 없습니다</span>
+                        {% endif %}
+                        {% else %}
                         <span class="login_ment">로그인 해주세요</span>
                         {% endif %}
                 </div>
     </div>
     {% if user.is_authenticated %}
+    {% if brack.position is not null %}
     <div class="buttonBox">   
         <button class="button" onclick="location.href='{% url 'remove' %}'">거치 해제하기</button>
         
     </div>
+    {% endif %}
     {% endif %}
 
 </body>

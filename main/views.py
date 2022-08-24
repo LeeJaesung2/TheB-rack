@@ -18,7 +18,10 @@ def home(request):
     brack = Brack()
     if request.user.username:
         user = request.user.username
-        brack = Brack.objects.get(username__username=user)
+        try:   
+            brack = Brack.objects.get(username__username=user)
+        except Brack.DoesNotExist:
+            brack = Brack()
     return render(request, 'home.html',{'brack':brack})
 
 
@@ -58,11 +61,17 @@ def rack(request,bycicle_position):
         brack.position = bycicle_position
         brack.username = User.objects.get(username=request.user.username)
         brack.bycicle = get_object_or_404(Bycicle_info, pk=bycicle_position)
+        brack.bycicle.status = 1
+        brack.bycicle.save()
         brack.save()
 
     return redirect('home')
 
 def remove(request):
+    brack = Brack.objects.get(username__username=request.user.username)
+    brack.bycicle.status = 0
+    brack.bycicle.save()
+    brack.delete()
     return redirect('home')
 
 def email_is_valid(addr):
