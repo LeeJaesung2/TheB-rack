@@ -18,8 +18,14 @@
                 <div class="top">
                     <span id ="information">자전거 거치정보</span>
                     {% if user.is_authenticated %}
+                    {% if brack.bycicle.status == 1 %}
                     <div id="circle"></div>
                     <span id="status">거치중</span>
+                    {% endif %}
+                    {% endif %}
+                    {% if brack.bycicle.status == 2 %}
+                    <div id="circle2"></div>
+                    <span id="status2">도난!!</span>
                     {% endif %}
                 </div>
                 <div class="bottom">
@@ -28,7 +34,11 @@
                         <span class="gray">자전거 위치</span><br></br>
                         <div id="parkingPlace">
                             <span>{{ brack.position }}번</span>
+                            {% if brack.bycicle.status == 1 %}
                             <div id="safety">안전</div>
+                            {% else %}
+                            <div id="safety2">도난</div>
+                            {% endif %}
                         </div>
                         <P class="gray">거치 시간</P>
                         <span>{{ brack.bycicle.rack_time }}</span>

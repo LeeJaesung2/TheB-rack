@@ -32,3 +32,19 @@
 .img{
     width :100%;
 }
+
+.button2{
+    color: rgb(201, 201, 201);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    left: 50%;
+    top: 50%;
+    background-color: rgb(126, 126, 126);
+    border: 1px solid rgb(126, 126, 126);
+}

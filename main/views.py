@@ -38,11 +38,19 @@ def post(request):
 @api_view(['PATCH'])
 def update(request, bycicle_position):
     bycicle_info = Bycicle_info.objects.get(pk = bycicle_position)
-    serializer = BycicleSerializer(bycicle_info, data=request.data, partrial = True)
+    serializer = BycicleSerializer(bycicle_info, data=request.data, partial = True)
 
     if serializer.is_valid():
         serializer.save()
-        return Response(serializer.data, status = status.HTTP_201_CREATED)
+        try:
+            brack = Brack.objects.get(pk=bycicle_position)
+            brack.bycicle.status = 2
+            brack.bycicle.save()
+            data = {"position": brack.bycicle.position, "status": brack.bycicle.status, "rack_time": brack.bycicle.rack_time}
+            sendMail(brack.username.email)
+            return Response(data, status = status.HTTP_201_CREATED)
+        except:
+            return Response(serializer.data, status = status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
