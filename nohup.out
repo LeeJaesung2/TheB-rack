@@ -1,0 +1,265 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 25, 2022 - 10:50:51
+Django version 4.1, using settings 'thebrack.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[25/Aug/2022 10:52:06] "GET / HTTP/1.1" 200 1479
+[25/Aug/2022 10:52:06] "GET /static/css/nav.css HTTP/1.1" 304 0
+[25/Aug/2022 10:52:06] "GET /static/img/logo.svg HTTP/1.1" 304 0
+[25/Aug/2022 10:52:06] "GET /static/css/home.css HTTP/1.1" 304 0
+[25/Aug/2022 10:52:06] "GET /static/img/infoTap.svg HTTP/1.1" 304 0
+[25/Aug/2022 10:52:06] "GET /static/img/homeTap.svg HTTP/1.1" 304 0
+[25/Aug/2022 10:52:06] "GET /static/img/login.svg HTTP/1.1" 304 0
+[25/Aug/2022 10:52:06] "GET /favicon.ico HTTP/1.1" 404 179
+[25/Aug/2022 10:52:15] "GET / HTTP/1.1" 200 1479
+[25/Aug/2022 10:52:21] "GET /user/ HTTP/1.1" 200 1298
+[25/Aug/2022 10:52:21] "GET /static/css/login.css HTTP/1.1" 304 0
+[25/Aug/2022 10:52:21] "GET /static/img/kakao_login.png HTTP/1.1" 304 0
+[25/Aug/2022 10:52:22] "GET /user/kakao/login/ HTTP/1.1" 302 0
+[25/Aug/2022 11:01:42] "GET / HTTP/1.1" 200 1479
+[25/Aug/2022 11:01:42] "GET /static/css/nav.css HTTP/1.1" 304 0
+[25/Aug/2022 11:01:42] "GET /static/img/logo.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:01:42] "GET /static/css/home.css HTTP/1.1" 304 0
+[25/Aug/2022 11:01:42] "GET /static/img/homeTap.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:01:42] "GET /static/img/infoTap.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:01:42] "GET /static/img/login.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:01:47] "GET /user/ HTTP/1.1" 200 1298
+[25/Aug/2022 11:01:47] "GET /static/css/login.css HTTP/1.1" 304 0
+[25/Aug/2022 11:01:47] "GET /static/img/kakao_login.png HTTP/1.1" 304 0
+[25/Aug/2022 11:01:48] "GET /user/kakao/login/ HTTP/1.1" 302 0
+[25/Aug/2022 11:05:08] "GET / HTTP/1.1" 200 1479
+[25/Aug/2022 11:05:08] "GET /static/css/nav.css HTTP/1.1" 304 0
+[25/Aug/2022 11:05:08] "GET /static/img/logo.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:05:08] "GET /static/css/home.css HTTP/1.1" 304 0
+[25/Aug/2022 11:05:08] "GET /static/img/homeTap.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:05:08] "GET /static/img/infoTap.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:05:08] "GET /static/img/login.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:07:25] "GET /user/ HTTP/1.1" 200 1298
+[25/Aug/2022 11:07:25] "GET /static/img/logo.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:07:25] "GET /static/css/nav.css HTTP/1.1" 304 0
+[25/Aug/2022 11:07:25] "GET /static/css/login.css HTTP/1.1" 304 0
+[25/Aug/2022 11:07:25] "GET /static/img/kakao_login.png HTTP/1.1" 304 0
+[25/Aug/2022 11:07:25] "GET /static/img/homeTap.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:07:25] "GET /static/img/infoTap.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:07:25] "GET /static/img/login.svg HTTP/1.1" 304 0
+[25/Aug/2022 11:07:26] "GET /user/kakao/login/ HTTP/1.1" 302 0
+[25/Aug/2022 11:13:31] "GET / HTTP/1.1" 200 1479
+[25/Aug/2022 11:13:31] "GET /static/img/logo.svg HTTP/1.1" 200 7638
+[25/Aug/2022 11:13:31] "GET /static/css/nav.css HTTP/1.1" 200 691
+[25/Aug/2022 11:13:31] "GET /static/img/homeTap.svg HTTP/1.1" 200 1188
+[25/Aug/2022 11:13:32] "GET /static/css/home.css HTTP/1.1" 200 1845
+[25/Aug/2022 11:13:32] "GET /static/img/infoTap.svg HTTP/1.1" 200 2986
+[25/Aug/2022 11:13:32] "GET /static/img/login.svg HTTP/1.1" 200 1682
+[25/Aug/2022 11:13:40] "GET /user/ HTTP/1.1" 200 1298
+[25/Aug/2022 11:13:40] "GET /static/img/logo.svg HTTP/1.1" 200 7638
+[25/Aug/2022 11:13:40] "GET /static/css/nav.css HTTP/1.1" 200 691
+[25/Aug/2022 11:13:40] "GET /static/img/homeTap.svg HTTP/1.1" 200 1188
+[25/Aug/2022 11:13:40] "GET /static/img/kakao_login.png HTTP/1.1" 200 2946
+[25/Aug/2022 11:13:40] "GET /static/css/login.css HTTP/1.1" 200 579
+[25/Aug/2022 11:13:40] "GET /static/img/infoTap.svg HTTP/1.1" 200 2986
+[25/Aug/2022 11:13:40] "GET /static/img/login.svg HTTP/1.1" 200 1682
+[25/Aug/2022 11:13:41] "GET /user/kakao/login/ HTTP/1.1" 302 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 25, 2022 - 11:18:30
+Django version 4.1, using settings 'thebrack.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+Error: That port is already in use.
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 546, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+?: (corsheaders.E013) Origin 'ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com:8000' in CORS_ALLOWED_ORIGINS is missing scheme or netloc
+	HINT: Add a scheme (e.g. https://) or netloc (e.g. example.com).
+
+System check identified 1 issue (0 silenced).
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 546, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+?: (corsheaders.E013) Origin 'ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com:8000' in CORS_ALLOWED_ORIGINS is missing scheme or netloc
+	HINT: Add a scheme (e.g. https://) or netloc (e.g. example.com).
+
+System check identified 1 issue (0 silenced).
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 546, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+?: (corsheaders.E013) Origin 'ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com' in CORS_ALLOWED_ORIGINS is missing scheme or netloc
+	HINT: Add a scheme (e.g. https://) or netloc (e.g. example.com).
+
+System check identified 1 issue (0 silenced).
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 546, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+?: (corsheaders.E013) Origin 'ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com' in CORS_ALLOWED_ORIGINS is missing scheme or netloc
+	HINT: Add a scheme (e.g. https://) or netloc (e.g. example.com).
+
+System check identified 1 issue (0 silenced).
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 25, 2022 - 13:13:21
+Django version 4.1, using settings 'thebrack.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[25/Aug/2022 13:13:37] "GET / HTTP/1.1" 200 1479
+[25/Aug/2022 13:13:38] "GET /static/css/nav.css HTTP/1.1" 200 691
+[25/Aug/2022 13:13:38] "GET /static/img/logo.svg HTTP/1.1" 200 7638
+[25/Aug/2022 13:13:38] "GET /static/css/home.css HTTP/1.1" 200 1845
+[25/Aug/2022 13:13:38] "GET /static/img/homeTap.svg HTTP/1.1" 200 1188
+[25/Aug/2022 13:13:38] "GET /static/img/infoTap.svg HTTP/1.1" 200 2986
+[25/Aug/2022 13:13:38] "GET /static/img/login.svg HTTP/1.1" 200 1682
+[25/Aug/2022 16:04:32] code 400, message Bad request syntax ('MGLNDD_15.164.210.172_8000')
+[25/Aug/2022 16:04:32] "MGLNDD_15.164.210.172_8000" 400 -
+[25/Aug/2022 17:17:19,352] - Broken pipe from ('167.94.138.60', 41598)
+[25/Aug/2022 17:17:20] "GET / HTTP/1.1" 400 143
+[25/Aug/2022 17:17:20] "GET / HTTP/1.1" 400 143
+[25/Aug/2022 17:17:21] code 505, message Invalid HTTP version (2.0)
+[25/Aug/2022 17:17:21] "PRI * HTTP/2.0" 505 -
+[25/Aug/2022 17:44:58] "GET / HTTP/1.1" 400 143
+[25/Aug/2022 17:45:07] "GET / HTTP/1.1" 400 143
+[25/Aug/2022 17:45:07] "GET /favicon.ico HTTP/1.1" 400 143
+[25/Aug/2022 18:03:40] "GET / HTTP/1.1" 400 143
+[25/Aug/2022 18:23:29] code 400, message Bad request version ('À\x14À')
+[25/Aug/2022 18:23:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+[25/Aug/2022 18:23:30] code 400, message Bad request version ('À\x14À')
+[25/Aug/2022 18:23:30] You're accessing the development server over HTTPS, but it only supports HTTP.
+[25/Aug/2022 18:23:30] "GET / HTTP/1.1" 400 143
+[25/Aug/2022 19:17:59] "GET / HTTP/1.1" 400 143
+[25/Aug/2022 20:30:42] code 400, message Bad request version ('À\x14À')
+[25/Aug/2022 20:30:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+[25/Aug/2022 20:30:42] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03@ås\x842\x06h×\x925Ü\x81È%Û_Q«ß\x0fÄ\x10\x96:ÔëÀ1îd\x84\x01\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[25/Aug/2022 20:30:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+[25/Aug/2022 20:30:43] "GET / HTTP/1.1" 400 143
+[25/Aug/2022 22:09:48] code 400, message Bad request syntax ('ðÞ¼')
+[25/Aug/2022 22:09:48] "ðÞ¼" 400 -
+[26/Aug/2022 01:04:05] "GET / HTTP/1.1" 200 1479
+[26/Aug/2022 01:04:05] "GET /static/css/nav.css HTTP/1.1" 200 691
+[26/Aug/2022 01:04:05] "GET /static/img/logo.svg HTTP/1.1" 200 7638
+[26/Aug/2022 01:04:05] "GET /static/img/homeTap.svg HTTP/1.1" 200 1188
+[26/Aug/2022 01:04:05] "GET /static/css/home.css HTTP/1.1" 200 1845
+[26/Aug/2022 01:04:05] "GET /static/img/login.svg HTTP/1.1" 200 1682
+[26/Aug/2022 01:04:05] "GET /static/img/infoTap.svg HTTP/1.1" 200 2986
+[26/Aug/2022 01:04:05] "GET /favicon.ico HTTP/1.1" 404 179
+[26/Aug/2022 01:04:12] "GET /user/ HTTP/1.1" 200 1298
+[26/Aug/2022 01:04:12] "GET /static/img/kakao_login.png HTTP/1.1" 200 2946
+[26/Aug/2022 01:04:12] "GET /static/css/login.css HTTP/1.1" 200 579
+[26/Aug/2022 01:04:14] "GET /user/kakao/login/ HTTP/1.1" 302 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2022 - 01:06:54
+Django version 4.1, using settings 'thebrack.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[26/Aug/2022 01:07:40] "GET / HTTP/1.1" 200 1479
+[26/Aug/2022 01:07:40] "GET /static/img/logo.svg HTTP/1.1" 304 0
+[26/Aug/2022 01:07:40] "GET /static/css/nav.css HTTP/1.1" 304 0
+[26/Aug/2022 01:07:40] "GET /static/css/home.css HTTP/1.1" 304 0
+[26/Aug/2022 01:07:40] "GET /static/img/login.svg HTTP/1.1" 304 0
+[26/Aug/2022 01:07:40] "GET /static/img/homeTap.svg HTTP/1.1" 304 0
+[26/Aug/2022 01:07:40] "GET /static/img/infoTap.svg HTTP/1.1" 304 0
+[26/Aug/2022 01:07:40] "GET /favicon.ico HTTP/1.1" 404 179
+[26/Aug/2022 01:07:44] "GET /user/ HTTP/1.1" 200 1298
+[26/Aug/2022 01:07:44] "GET /static/css/login.css HTTP/1.1" 304 0
+[26/Aug/2022 01:07:44] "GET /static/img/kakao_login.png HTTP/1.1" 304 0
+[26/Aug/2022 01:07:45] "GET /user/kakao/login/ HTTP/1.1" 302 0
+[26/Aug/2022 01:07:45] "GET /user/kakao/login/callback?code=rJqsbuVQwgSYovE7FzW7pGd8IAgZxMjgrWQ0t1-HX7VLfv-sSFZBHMTX8zJeRPRPfjs7PQorDKYAAAGC17DQgQ HTTP/1.1" 301 0
+[26/Aug/2022 01:07:45] "GET /user/kakao/login/callback/?code=rJqsbuVQwgSYovE7FzW7pGd8IAgZxMjgrWQ0t1-HX7VLfv-sSFZBHMTX8zJeRPRPfjs7PQorDKYAAAGC17DQgQ HTTP/1.1" 302 0
+[26/Aug/2022 01:07:45] "GET / HTTP/1.1" 200 2060
+[26/Aug/2022 01:07:45] "GET /static/img/myTap.svg HTTP/1.1" 200 2027
+[26/Aug/2022 01:08:15] "GET /admin HTTP/1.1" 301 0
+[26/Aug/2022 01:08:15] "GET /admin/ HTTP/1.1" 302 0
+[26/Aug/2022 01:08:16] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2381
+[26/Aug/2022 01:08:16] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+[26/Aug/2022 01:08:16] "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[26/Aug/2022 01:08:16] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+[26/Aug/2022 01:08:16] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+[26/Aug/2022 01:08:16] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+[26/Aug/2022 01:08:16] "GET /static/admin/css/login.css HTTP/1.1" 200 939
+[26/Aug/2022 01:08:16] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[26/Aug/2022 01:08:16] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[26/Aug/2022 01:08:16] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[26/Aug/2022 01:08:16] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[26/Aug/2022 01:08:27] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2545
+[26/Aug/2022 01:08:27] "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[26/Aug/2022 01:08:33] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2545
+[26/Aug/2022 01:08:33] "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[26/Aug/2022 01:08:42] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2548
+[26/Aug/2022 01:08:42] "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[26/Aug/2022 01:08:50] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2545
+[26/Aug/2022 01:08:50] "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[26/Aug/2022 01:08:55] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2381
+[26/Aug/2022 01:11:36] "GET / HTTP/1.1" 200 2060
+[26/Aug/2022 01:11:36] "GET /static/css/nav.css HTTP/1.1" 304 0
+[26/Aug/2022 01:11:36] "GET /static/img/logo.svg HTTP/1.1" 304 0
+[26/Aug/2022 01:11:36] "GET /static/img/infoTap.svg HTTP/1.1" 304 0
+[26/Aug/2022 01:11:36] "GET /static/img/myTap.svg HTTP/1.1" 304 0
+[26/Aug/2022 01:11:36] "GET /static/img/homeTap.svg HTTP/1.1" 304 0
+[26/Aug/2022 01:11:36] "GET /static/css/home.css HTTP/1.1" 304 0
+[26/Aug/2022 01:11:36] "GET /favicon.ico HTTP/1.1" 404 179
+[26/Aug/2022 01:11:41] "GET /user/ HTTP/1.1" 200 1298
+[26/Aug/2022 01:11:41] "GET /static/img/kakao_login.png HTTP/1.1" 304 0
+[26/Aug/2022 01:11:41] "GET /static/css/login.css HTTP/1.1" 304 0
+[26/Aug/2022 01:11:43] "GET / HTTP/1.1" 200 2060
+[26/Aug/2022 01:11:45] "GET /user/ HTTP/1.1" 200 1298
+[26/Aug/2022 01:11:46] "GET / HTTP/1.1" 200 2060
+[26/Aug/2022 01:11:47] "GET /user/ HTTP/1.1" 200 1298

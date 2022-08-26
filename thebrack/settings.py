@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-77)gvw#tv+3=2gv9o(gcv5f2jq#p6^ko^8f9fnckgmn3sj1$cg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com']
 AUTH_USER_MODEL = 'user.User'
 
 
@@ -43,9 +43,11 @@ INSTALLED_APPS = [
     "user.apps.UserConfig",
     'rest_framework',
     'drf_yasg',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,6 +56,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "http://ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com:8000",
 ]
 
 ROOT_URLCONF = 'thebrack.urls'
@@ -136,8 +143,10 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static_root')
 
 
 KAKAO_REST_API_KEY = "95d396fe2cdb14e29e540b99118bd313"
-KAKAO_REDIRECT_URI = "http://ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com/user/kakao/login/callback"
+KAKAO_REDIRECT_URI = "http://ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com:8000/user/kakao/login/callback"
 KAKAO_CLIENT_SECRET_KEY = "acNdarrmhWUNqdk11n1J4aAT5wjDPd70"
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465
+
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
