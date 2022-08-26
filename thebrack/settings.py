@@ -58,10 +58,11 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
-    "http://ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com:8000",
-]
+#CORS_ALLOWED_ORIGINS = [
+#    "http://localhost:8000",
+#    "http://ec2-15-164-210-172.ap-northeast-2.compute.amazonaws.com:8000",
+#]
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'thebrack.urls'
 
