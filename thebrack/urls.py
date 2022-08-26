@@ -20,6 +20,7 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name='home'),
+    path('',include('pwa.urls')),
     path('status',views.post, name='post'),
     #path('status/<int:bycicle_position>',views.get, name='get'),
     path('status/<int:bycicle_position>',views.update, name='update'),

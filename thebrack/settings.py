@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "user.apps.UserConfig",
     'rest_framework',
     'drf_yasg',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,31 @@ KAKAO_CLIENT_SECRET_KEY = "acNdarrmhWUNqdk11n1J4aAT5wjDPd70"
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465
+
+#setting pwa 
+
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static_root/js','serviceworker.js')
+
+PWA_APP_NAME = 'TheB-rack'
+PWA_APP_DESCRIPTION = "TheB-rack PWA"
+PWA_APP_THEME_COLOR = '#000000'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_ORIENTATION = 'any'
+PWA_APP_START_URL = '/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
+PWA_APP_ICONS = [
+    {
+        'src': 'static/img/logo.svg',
+        'sizes': '160x160'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': 'static/img/logo.svg',
+        'sizes': '160x160'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
