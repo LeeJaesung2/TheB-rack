@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -42,14 +43,16 @@ def update(request, bycicle_position):
 
     if serializer.is_valid():
         serializer.save()
+        brack = Brack.objects.get(pk=bycicle_position)
+        brack.rack_time = timezone.now()
         try:
-            brack = Brack.objects.get(pk=bycicle_position)
             brack.bycicle.status = 2
             brack.bycicle.save()
             data = {"position": brack.bycicle.position, "status": brack.bycicle.status, "rack_time": brack.bycicle.rack_time}
             sendMail(brack.username.email)
             return Response(data, status = status.HTTP_201_CREATED)
         except:
+            brack.save()
             return Response(serializer.data, status = status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
