@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-77)gvw#tv+3=2gv9o(gcv5f2jq#p6^ko^8f9fnckgmn3sj1$cg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = 'user.User'
 
 
@@ -54,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'thebrack.urls'
 
@@ -133,7 +135,7 @@ STATICFILES_DIRS=[ os.path.join(BASE_DIR,'static'),]
 
 
 KAKAO_REST_API_KEY = "95d396fe2cdb14e29e540b99118bd313"
-KAKAO_REDIRECT_URI = "http://localhost:8000/user/kakao/login/callback"
+KAKAO_REDIRECT_URI = "http://ec2-13-124-235-126.ap-northeast-2.compute.amazonaws.com:8000/user/kakao/login/callback"
 KAKAO_CLIENT_SECRET_KEY = "acNdarrmhWUNqdk11n1J4aAT5wjDPd70"
 
 SMTP_SERVER = "smtp.gmail.com"
